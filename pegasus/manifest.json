@@ -5,10 +5,6 @@
   "author": "federico.magnone@gmail.com",
   "default_locale": "it",
   "description": "…",
-  "icons": {
-    "48": "icon.png",
-    "96": "icon@2x.png"
-  },
   "start_url": ".",
   "display": "standalone",
   "theme_color": "black",
