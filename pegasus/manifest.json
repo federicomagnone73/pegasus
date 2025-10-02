@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "MARTE",
   "version": "0.1",
-  "author": "federico.magnone@gmail.com"
+  "author": "federico.magnone@gmail.com",
   "default_locale": "it",
   "description": "…",
   "icons": {
