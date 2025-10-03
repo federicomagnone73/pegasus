@@ -50,5 +50,28 @@
 
     <!-- RIFERIMENTO ALLA LOGICA JAVASCRIPT -->
     <script src="/logic.js"></script>
+
+    <!-- IFERIMENTO ALLA REGISTRAZIONE DEL SERVICE WORKER -->
+    <script>
+        function registerServiceWorker() {
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    // Registra il Service Worker usando il percorso corretto
+                    navigator.serviceWorker.register('/service-worker.js')
+                        .then(reg => {
+                            console.log('Service Worker PEGASUS registrato con successo.');
+                        })
+                        .catch(err => {
+                            console.error('Registrazione Service Worker PEGASUS fallita:', err);
+                        });
+                });
+            } else {
+                console.log('Il browser non supporta i Service Workers.');
+            }
+        }
+    
+        // Chiama la funzione di registrazione
+        registerServiceWorker(); 
+    </script>
 </body>
 </html>
