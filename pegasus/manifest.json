@@ -1,12 +1,21 @@
 {
-  "manifest_version": 2,
-  "name": "PEGASUS",
-  "version": "0.1",
-  "author": "federico.magnone@gmail.com",
-  "default_locale": "it",
-  "description": "…",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "black",
-  "background_color": "white"
+    "name": "PEGASUS",
+    "short_name": "PEGASUS",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#3b82f6",
+    "description": "Un'applicazione web base modulare.",
+    "icons": [
+        {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }
