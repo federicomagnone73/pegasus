@@ -1,0 +1,21 @@
+{
+  "name": "PEGASUS",
+  "short_name": "Pegasus",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/icon36.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#FFFFFF",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
