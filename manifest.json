@@ -9,7 +9,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#000000",
+  "theme_color": "#0000FF",
   "background_color": "#FFFFFF",
   "display": "fullscreen",
   "orientation": "portrait"
