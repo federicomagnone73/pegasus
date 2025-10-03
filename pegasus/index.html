@@ -1,7 +1,73 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <link rel="manifest" href="manifest.json" />
-  </head>
-  <body></body>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEGASUS</title>
+    <!-- Carica Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carica Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+    <!-- RIFERIMENTO CONCETTUALE AL MANIFEST PER PWA -->
+    <!-- In un progetto reale, questo link caricherebbe il file manifest.json -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- RIFERIMENTO CONCETTUALE AL FOGLIO DI STILE ESTERNO -->
+    <!-- In un progetto reale, questo link caricherebbe theme_styles.css -->
+    <style>
+        /*
+         * *** ATTENZIONE ***
+         * Per far funzionare l'app in questo ambiente, il contenuto di 'theme_styles.css.md'
+         * dovrebbe essere inserito qui all'interno di questo blocco <style>.
+         */
+    </style>
+</head>
+<body data-theme="light">
+
+    <!-- Contenitore Principale -->
+    <div id="main-container" class="p-4 mx-auto max-w-xl w-full transition-colors duration-300">
+        <div id="app-content">
+            <!-- Contenuto della pagina iniettato dal JavaScript -->
+            <p class="text-center text-red-500">
+                Caricamento in corso... Se il contenuto non appare, la logica JavaScript (app_logic.js) non è stata caricata.
+            </p>
+        </div>
+    </div>
+
+    <!-- Barra di Navigazione Fissa in Basso -->
+    <nav id="bottom-nav" class="flex justify-around items-center">
+        <!-- I pulsanti di navigazione sono gestiti dal JavaScript -->
+        <button id="nav-home" class="nav-item w-1/4 h-full flex flex-col items-center justify-center text-xs sm:text-sm" data-page="home">
+            <i class="fas fa-home text-xl mb-1"></i>
+            <span>Home</span>
+        </button>
+        <button id="nav-dashboard" class="nav-item w-1/4 h-full flex flex-col items-center justify-center text-xs sm:text-sm" data-page="dashboard">
+            <i class="fas fa-chart-line text-xl mb-1"></i>
+            <span>Dashboard</span>
+        </button>
+        <button id="nav-profile" class="nav-item w-1/4 h-full flex flex-col items-center justify-center text-xs sm:text-sm" data-page="profile">
+            <i class="fas fa-user-circle text-xl mb-1"></i>
+            <span>Profilo</span>
+        </button>
+        <button id="nav-settings" class="nav-item w-1/4 h-full flex flex-col items-center justify-center text-xs sm:text-sm" data-page="settings">
+            <i class="fas fa-cog text-xl mb-1"></i>
+            <span>Impostaz.</span>
+        </button>
+    </nav>
+
+    <!-- RIFERIMENTO CONCETTUALE ALLA LOGICA JAVASCRIPT -->
+    <!-- In un progetto reale, questo tag caricherebbe il file app_logic.js -->
+    <script>
+        //
+        // *** ATTENZIONE ***
+        // Per far funzionare l'app in questo ambiente, il contenuto di 'app_logic.js.md'
+        // DEVE essere inserito qui all'interno di questo blocco <script>.
+        //
+        window.onload = function() {
+            console.log("PEGASUS: La logica dell'app è stata separata nel file app_logic.js.md.");
+            // Qui ci sarebbero le chiamate a loadSettings() e renderPage('home')
+        };
+    </script>
+</body>
 </html>
