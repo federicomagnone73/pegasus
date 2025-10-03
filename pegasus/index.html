@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     
     <!-- RIFERIMENTO AL MANIFEST PER PWA -->
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/pegasus/manifest.json">
     
     <!-- RIFERIMENTO AL FOGLIO DI STILE ESTERNO -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/pegasus/style.css">
 </head>
 <body data-theme="light">
 
@@ -73,7 +73,7 @@
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => {
                     // Registra il Service Worker usando il percorso corretto
-                    navigator.serviceWorker.register('/service-worker.js')
+                    navigator.serviceWorker.register('/pegasus/service-worker.js')
                         .then(reg => {
                             console.log('Service Worker PEGASUS registrato con successo.');
                         })
