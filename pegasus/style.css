@@ -1,69 +1,129 @@
-/* ======================================================= /
-/ CSS GLOBALE e TEMI                                       /
-/ ======================================================= */
+/*
 
-/* Stili Base e Variabili Default (Tema Chiaro) /
+PEGASUS Stili Personalizzati e Temi (Basato su Bulma)
+
+Contiene i CSS specifici per il layout e la gestione dei temi tramite variabili CSS.
+*/
+
 :root {
---bg-primary: #f8f9fa;
---bg-secondary: #ffffff;
---text-color: #212529;
---accent-color: #3b82f6; / Blu PEGASUS */
---nav-bg: #ffffff;
---nav-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
-color-scheme: light;
+/* --- Tema Chiaro (DEFAULT) --- /
+--color-primary: #3273dc; / Blu Bulma */
+--color-background: #ffffff;
+--color-text: #4a4a4a;
+--color-nav-bg: #f5f5f5;
+--color-nav-item: #7a7a7a;
+--color-nav-active: var(--color-primary);
+--color-card-bg: #f5f5f5;
+--color-border: #dbdbdb;
 }
 
-/* Tema Scuro */
-[data-theme="dark"] {
---bg-primary: #1f2937;
---bg-secondary: #374151;
---text-color: #f3f4f6;
---accent-color: #60a5fa;
---nav-bg: #111827;
---nav-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.5);
-color-scheme: dark;
+/* --- Tema Scuro (Dark) --- /
+body[data-theme="dark"] {
+--color-primary: #00d1b2; / Turchese Bulma */
+--color-background: #1e1e1e;
+--color-text: #f5f5f5;
+--color-nav-bg: #2d2d2d;
+--color-nav-item: #b5b5b5;
+--color-nav-active: var(--color-primary);
+--color-card-bg: #282828;
+--color-border: #444444;
 }
 
-/* Stili App */
+/* --- Tema Oceano (Ocean) - Aggiunto come esempio extra se richiesto --- /
+body[data-theme="ocean"] {
+--color-primary: #48c78e; / Verde Mare */
+--color-background: #e6f0ff;
+--color-text: #1f3a93;
+--color-nav-bg: #ffffff;
+--color-nav-item: #3273dc;
+--color-nav-active: var(--color-primary);
+--color-card-bg: #ffffff;
+--color-border: #bbdefb;
+}
+
+/* --- Stili di Base dell'Applicazione --- */
+
+/* Applica colori di tema al body e rimuove margini /
 body {
-background-color: var(--bg-primary);
-color: var(--text-color);
+background-color: var(--color-background);
+color: var(--color-text);
+padding-bottom: 52px; / Lascia spazio per la nav bar fissa */
 min-height: 100vh;
+}
+
+/* Area principale del contenuto */
+.content-area {
+padding: 1.5rem 1.5rem 0;
+max-width: 800px;
+margin: 0 auto;
+}
+
+/* Pagine nascoste di default */
+.page {
+display: none;
+animation: fadeIn 0.3s ease-in-out;
+}
+
+.page.active {
+display: block;
+}
+
+/* --- Navigazione Fissa in Basso --- */
+
+.navbar-bottom {
+background-color: var(--color-nav-bg);
+border-top: 1px solid var(--color-border);
+padding: 0;
+height: 52px;
+}
+
+.navbar-menu {
+justify-content: space-around;
+}
+
+.navbar-item {
 display: flex;
 flex-direction: column;
-font-family: 'Inter', sans-serif;
-transition: background-color 0.3s, color 0.3s;
+justify-content: center;
+align-items: center;
+padding: 0.25rem 0.5rem;
+height: 100%;
+color: var(--color-nav-item);
+font-size: 0.7rem;
+cursor: pointer;
+transition: color 0.2s, background-color 0.2s;
+user-select: none; /* Previene la selezione del testo */
 }
 
-#main-container {
-flex-grow: 1;
-padding-bottom: 72px; /* Riserva spazio per la navbar in basso */
-padding-top: 16px;
+.navbar-item.active {
+color: var(--color-nav-active);
 }
 
-#bottom-nav {
-position: fixed;
-bottom: 0;
-left: 0;
-right: 0;
-height: 64px;
-background-color: var(--nav-bg);
-box-shadow: var(--nav-shadow);
-z-index: 1000;
+.navbar-item:hover {
+color: var(--color-nav-active);
 }
 
-.nav-item {
-color: var(--text-color);
-transition: color 0.2s;
+.navbar-item .icon {
+font-size: 1.2rem;
+margin-bottom: 0.1rem;
 }
 
-.nav-item.active {
-color: var(--accent-color);
-border-top: 2px solid var(--accent-color);
+/* Stile per i box di contenuto */
+.box {
+background-color: var(--color-card-bg);
+border: 1px solid var(--color-border);
+color: var(--color-text);
+transition: background-color 0.2s, border-color 0.2s;
 }
 
-.card {
-background-color: var(--bg-secondary);
-color: var(--text-color);
-transition: background-color 0.3s, color 0.3s;
+/* Nasconde il pulsante di installazione per impostazione predefinita /
+#install-pegasus-button {
+display: none; / Sarà reso visibile da JavaScript /
+/ Lo stile della pillola è dato dalle classi Bulma 'button is-small' */
+}
+
+/* Animazione di transizione tra pagine */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
 }
