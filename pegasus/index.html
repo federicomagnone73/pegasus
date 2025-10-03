@@ -22,13 +22,29 @@
         <div id="app-content">
             <!-- Contenuto della pagina iniettato dal JavaScript -->
             <p class="text-center text-red-500">
-                Caricamento in corso... Se il contenuto non appare, la logica JavaScript (app_logic.js) non è stata caricata.
+                Caricamento in corso... Se il contenuto non appare, la logica JavaScript (logic.js) non è stata caricata.
             </p>
         </div>
     </div>
 
+    <!-- Contenuto della Pagina Home -->
+    <section id="page-home" class="page active p-6">
+        <h2 class="text-3xl font-bold mb-4 var(--text-color)">Benvenuto in PEGASUS!</h2>
+        <p class="var(--text-color)">Questa è la pagina principale della tua PWA.</p>
+    </section>
+
     <!-- Barra di Navigazione Fissa in Basso -->
     <nav id="bottom-nav" class="flex justify-around items-center">
+        <!-- Pulsante Installa (inizialmente nascosto) -->
+        <button id="install-button" 
+                class="hidden flex flex-col items-center text-sm p-2 rounded-full transition-colors duration-300 var(--text-color) hover:var(--primary-color) text-red-500 hover:text-red-700"
+                aria-label="Installa l'applicazione sul tuo dispositivo">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+            <span class="text-xs mt-1">Installa</span>
+        </button>
+        
         <!-- I pulsanti di navigazione sono gestiti dal JavaScript -->
         <button id="nav-home" class="nav-item w-1/4 h-full flex flex-col items-center justify-center text-xs sm:text-sm" data-page="home">
             <i class="fas fa-home text-xl mb-1"></i>
