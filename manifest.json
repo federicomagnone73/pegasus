@@ -4,13 +4,8 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/icons/icon36.png",
+      "src": "/icons/icon_1024x1024.png",
       "sizes": "36x36",
-      "type": "image/png"
-    },
-    {
-      "src": "/icons/icon48.png",
-      "sizes": "48x48",
       "type": "image/png"
     }
   ],
