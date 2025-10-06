@@ -4,9 +4,11 @@ const CACHE_NAME = 'pegasus-cache-v1';
 // Risorse che compongono l'App Shell e devono essere messe in cache
 // L'URL './index.html' dovrà puntare all'effettivo file HTML
 const urlsToCache = [
-    './index.html', /* L'app stessa */
-    'https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css',                         /* La libreria CSS esterna */
-    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', /* La libreria CSS esterna */
+    './index.html',                                                                       /* L'app stessa */
+    './service-worker.js',                                                                /* Javascript: gestione service worker */
+    './install.js',                                                                       /* Javascript: gestione installazione A2HS */
+    'https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css',                         /* Libreria CSS esterna */
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', /* Libreria CSS esterna */
     'https://placehold.co/192x192/1e3a8a/ffffff?text=PWA'                                 /* Icona di placeholder */
 ];
 
