@@ -87,7 +87,7 @@ self.addEventListener('fetch', (event) => {
                 console.error('Service Worker: Errore nel fetch:', error);
                 // In caso di fallimento sia della cache che della rete (es. offline),
                 // serviamo la pagina HTML principale (un fallback sicuro).
-                return caches.match('./pwa_app.html'); 
+                return caches.match('./index.html'); 
             })
     );
 });
