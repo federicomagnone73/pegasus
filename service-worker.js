@@ -5,8 +5,9 @@ const CACHE_NAME = 'pegasus-cache-v1';
 // L'URL './index.html' dovrà puntare all'effettivo file HTML
 const urlsToCache = [
     './index.html', /* L'app stessa */
-    'https://cdn.tailwindcss.com', /* La libreria CSS esterna */
-    'https://placehold.co/192x192/1e3a8a/ffffff?text=PWA' /* Icona di placeholder */
+    'https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css',                         /* La libreria CSS esterna */
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', /* La libreria CSS esterna */
+    'https://placehold.co/192x192/1e3a8a/ffffff?text=PWA'                                 /* Icona di placeholder */
 ];
 
 /**
